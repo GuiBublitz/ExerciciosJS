@@ -1,5 +1,5 @@
 
-<h1 align="center">#14 Mini Projetos JavaScript</h1>
+<h1 align="center">#14 Mini Projetos JavaScript (Em desenvolvimento)</h1>
 
 ## Link: <a href="">Clique aqui para abir o projeto no seu navegador</a>.
 
