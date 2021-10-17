@@ -1,7 +1,7 @@
 
 <h1 align="center">#14 Mini Projetos JavaScript</h1>
 
-## Link: <a href="https://guibublitz.github.io/ProjetoDK5/">Clique aqui para abir o projeto no seu navegador</a>.
+## Link: <a href="">Clique aqui para abir o projeto no seu navegador</a>.
 
 
 
