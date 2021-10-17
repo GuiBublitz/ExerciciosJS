@@ -1,19 +1,10 @@
- <h1  align="center">
-  14 Mini Projetos em JS
-</h1>
 
-<p align="center">
-  <a href="#-Projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-executando-o-projeto">Exercícios</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-</p>
+<h1 align="center">#14 Mini Projetos JavaScript</h1>
 
-<p align="center">
-  <img alt="Grama XP 39" src="https://img.shields.io/static/v1?label=xp&message=39&color=success&labelColor=grey">
-  
-  <img alt="Stack Hacker" src="https://img.shields.io/static/v1?label=stack&message=hacker&color=success&labelColor=grey">
-  
-</p>
+# Link: <a href="https://guibublitz.github.io/ProjetoDK5/">Clique aqui para abir o projeto no seu navegador</a>.
+
+
+
 
 ## :computer: Projetos
 - Trocando valores de variáveis  
@@ -36,7 +27,8 @@
 Esse projeto foi desenvolvido com a seguinte tecnologia:
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 
 
