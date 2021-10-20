@@ -156,5 +156,15 @@ function somaMultiplos(m){
     console.log("A soma dos multiplos de 3 e 5 é de: " +contadorN);
 }
 //Fim multiplos de 3 e 5
-
+showOddNumbers(100);
+function showOddNumbers(number){
+    for(i = 1; i <= number; i++){
+        if (i%2 === 0){
+            continue;
+        }
+        if( i%15 === 0 ){
+            console.log(i);
+        }
+    }
+}
 
