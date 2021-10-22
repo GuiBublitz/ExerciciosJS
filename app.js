@@ -202,5 +202,45 @@ function asterisco (value){
         console.log(contador);
     }
 }
- //Fim asteriscos 
 
+function asteriscos2(value){
+    for (i=0; i < value; i++){
+        let contador = "";
+        for(x=0; x <= i; x++){
+            contador += "*";
+        }
+        console.log(contador)
+    }
+}
+//Fim asteriscos 
+
+//Números primos
+function primos(valor){
+    for(i=0; i <= valor; i++){
+        let contador = 0;
+        for(y=0; y <= i;y++){
+            if(i%y === 0){
+                contador += 1;
+            }
+        }
+        if (contador == 2)
+        console.log(i +" é um número primo!");
+    }
+}
+function primos2(valor){
+    for(let numero = 2; numero < valor; numero++){
+        let ehPrimo = NumeroPrimo(numero);
+        if (ehPrimo)console.log(numero);
+    }
+}
+function NumeroPrimo(numero){
+    let primo = true;
+    for(let divisor = 2; divisor < numero; divisor++){
+        if(numero % divisor === 0){
+            primo = false;
+            break;
+        }
+    }
+    return primo;
+}
+//Fim Números primos
