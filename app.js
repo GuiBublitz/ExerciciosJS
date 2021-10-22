@@ -229,18 +229,15 @@ function primos(valor){
 }
 function primos2(valor){
     for(let numero = 2; numero < valor; numero++){
-        let ehPrimo = NumeroPrimo(numero);
-        if (ehPrimo)console.log(numero);
+        if (NumeroPrimo(numero))console.log(numero);
     }
 }
 function NumeroPrimo(numero){
-    let primo = true;
     for(let divisor = 2; divisor < numero; divisor++){
         if(numero % divisor === 0){
-            primo = false;
-            break;
+            return false;
         }
     }
-    return primo;
+    return true;
 }
 //Fim Números primos
