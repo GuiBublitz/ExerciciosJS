@@ -194,4 +194,13 @@ function calculaMedia(array){
 }
 //Fim exercício médias escolar
 
+ //Astericos 
+function asterisco (value){
+    let contador = "";
+    for (i= 0 ; i < value; i++){
+        contador += "*";
+        console.log(contador);
+    }
+}
+ //Fim asteriscos 
 
