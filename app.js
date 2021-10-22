@@ -155,8 +155,6 @@ function somaMultiplos(m){
     }
     console.log("A soma dos multiplos de 3 e 5 é de: " +contadorN);
 }
-//Fim multiplos de 3 e 5
-showOddNumbers(100);
 function showOddNumbers(number){
     for(i = 1; i <= number; i++){
         if (i%2 === 0){
@@ -167,4 +165,33 @@ function showOddNumbers(number){
         }
     }
 }
+//Fim multiplos de 3 e 5
+
+//Exercício de média escolar
+/*
+Obter a média a partir de um array
+0-59: F
+60-69: D
+70-79: C
+80-89: B
+90-100: A
+*/ 
+const arrayNotas = [08,16,94,96,92,90];
+function mediaAluno(notas){
+    const media = calculaMedia(notas);
+    if(media <= 59)return "F";
+    if(media <= 69)return "D";
+    if(media <= 79)return "C";
+    if(media <= 89)return "B"
+    return "A";
+}
+function calculaMedia(array){
+    let media = 0;
+    for(let valor of array ){
+        media += valor;
+    }
+    return media / (array.length);
+}
+//Fim exercício médias escolar
+
 
