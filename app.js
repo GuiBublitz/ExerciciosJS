@@ -419,5 +419,45 @@ function exibirEndereco (obj){
         console.log(chave,obj[chave]);
     }
 }
-exibirEndereco(endereco2);
 ///////////////////////////////////////////////////////////////////////////Fim Montador de endereço
+
+////////////////////////////////////////////////////////////////////////////////Encontre a igualdade
+function MontadorCelular(marca,tela,qualidade,cor){
+    this.marca = marca,
+    this.tela = tela,
+    this.qualidade = qualidade,
+    this.cor = cor
+}
+let celu1 = new MontadorCelular('Motorola',7.0,true,'cinza');
+let celu2 = new MontadorCelular('Sansung',5.6,false,'branco');
+let celu3 = new MontadorCelular('Sansung',5.6,false,'branco');
+let celu4 = new MontadorCelular('Xiaomi',6.0,true,'vermelho');
+let celu5 = new MontadorCelular('Sansung',5.6,false,'branco');
+delete celu5.cor;
+celu5.recomendo = 'sim';
+function saoIguais(cel1,cel2){
+    if (!mesmoTamanho(cel1,cel2)) return false;
+    for (item in cel1){
+        if(cel1[item] != cel2[item]){
+            return false;
+        }
+    }
+    return true;
+}
+function atributosSaoIguais(cel1,cel2){
+    if (!mesmoTamanho(cel1,cel2)) return false;
+    let cell1 = Object.keys(cel1);
+    let cell2 = Object.keys(cel2);
+    for(i=0; i <= cell1.length; i++){
+        if(cell1[i] != cell2[i]){
+            return false;
+        }
+    }
+    return true;
+}
+function mesmoTamanho (cel1, cel2){
+    if (Object.keys(cel1).length != Object.keys(cel2).length) {
+        return false;
+    }else return true;
+}
+//////////////////////////////////////////////////////////////////////////////Fim encontre a igualdade
