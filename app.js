@@ -356,5 +356,15 @@ function getRandomInt(min, max) {
 ////////////////////////////////////////////////////////////////////////////////////////Fim do Math
 
 /////////////////////////////////////////////////////////////////String
+/*Tipo Primitivo*/ 
+const mensagem = "Bom dia!";
+/*Tipo objeto*/
+const outraMensagem = new String('Bom dia!');
 
+mensagem.length;
+mensagem.includes('Bom');//Se encontrar a palvra ou frase que vc escrever na variavel mensagem ele me retorna true, se não, retorna false.
+mensagem.startsWith('Bo');//Se a string começar com o 'Bo' ele retorna true
+mensagem.endsWith('');//Faz a mesma coisa q a de cima porém ele avalia o final da string
+mensagem.replace('Bom', 'Péssimo');//Ele deleta a string bom, e adiciona pessimo
+// Você pode verificar tudo oq vc imaginar em uma simples string, vc vai encontrar tudo na documentação mozilla
 ////////////////////////////////////////////////////////////////Fim String
