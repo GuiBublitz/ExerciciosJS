@@ -386,7 +386,38 @@ Fica o recado, atenciosamente, nós da sua casa!
 `
 return minhaMensagem;
 }
-
-
-console.log(m('Guilherme', 21));
 /////////////////////////////////////////////////////////////////////////////////Fim templete literal
+
+////////////////////////////////////////////////////////////////////////////////Montador de endereço
+/*
+Criar um objeto endereço que contem:
+Rua
+Estado
+Cidade
+CEP
+ExibirEndereço(endereco)
+*/ 
+//jeito q eu fiz 
+function MontadorEndereco (rua, estado, cidade, cep){
+    this.rua = rua,
+    this.estado = estado,
+    this.cidade = cidade,
+    this.cep = cep,
+    this.exibirEndereco = function(){
+        console.log(`${rua}\n${estado} \n${cidade} \n${cep}`);
+    }
+}
+const endereco = new MontadorEndereco('Margareth Bennertz','Santa Catarina','Blumenau','808-5456-5');
+// jeito professor
+let endereco2 = {
+    rua : 'a',
+    cidade : 'b',
+    cep : 'c'
+}
+function exibirEndereco (obj){
+    for(let chave in obj){
+        console.log(chave,obj[chave]);
+    }
+}
+exibirEndereco(endereco2);
+///////////////////////////////////////////////////////////////////////////Fim Montador de endereço
