@@ -461,3 +461,27 @@ function mesmoTamanho (cel1, cel2){
     }else return true;
 }
 //////////////////////////////////////////////////////////////////////////////Fim encontre a igualdade
+
+/////////////////////////////////////////////////////////////////////////////Objeto postagem de blog
+let postagem = {
+    titulo : 'Flamengo encerra o primeiro tempo com derrota para o Fluminese :(, até quando, Renato?',
+    mensagem : 
+    `
+    Depois de um primeiro tempo lamentável, o flamengo de renato vem com tudo para 
+    buscar a virada contra o time tricolor!! #VamosFlamengo!
+    `,
+    autor : 'Guilherme Eduardo Bublitz',
+    vizualizações : 9563,
+    comentarios : [
+    {
+        autor : 'GabiGol',
+        mensagem : 'Futebol brasileiro é um varzeaa'  
+    },
+    {
+        autor: 'cleitin',
+        mensagem : 'crênDeusPai'
+    }
+    ],
+    estaAoVivo : true
+}
+/////////////////////////////////////////////////////////////////////////////Fim objeto postagem de blog
