@@ -1,4 +1,4 @@
-//Trocando valor entre variáveis
+//////////////////////////////////////////////////////////////////////////Trocando valor entre variáveis
 let a;
 let b;
 let c;
@@ -13,9 +13,9 @@ function trocaVar(a,b){
     console.log("valor do 1° parâmetro: "+a);
     console.log("valor do 2° parâmetro: "+b);
 }
-//Fim trocando valor entre variáveis
+///////////////////////////////////////////////////////////////////////Fim trocando valor entre variáveis
 
-//Máximo entre 2 valores
+/////////////////////////////////////////////////////////////////////////Máximo entre 2 valores
 function retornaMaior(a,b){
     if(typeof(a) === "number" && typeof(b) == "number"){
         if(a > b){
@@ -37,9 +37,9 @@ function retornaMaior(a,b){
         console.log("Isto não faz sentido!! Tenta de novo.");
     }
 }
-//Fim Máximo entre 2 valores
+//////////////////////////////////////////////////////////////////Fim Máximo entre 2 valores
 
-//FizzBuzz
+////////////////////////////////////////////////////////////////////////////////////FizzBuzz
 /* 
     Divisível por 3 retorna "Fizz"
     Divisível por 5 retorna "Buzz"
@@ -60,9 +60,9 @@ function fizzBuzz(a){
         return a;
     }
 }
-//Fim do FizzBuzz
+////////////////////////////////////////////////////////////////////////////Fim do FizzBuzz
 
-//Medidor de velocidade
+///////////////////////////////////////////////////////////////////////Medidor de velocidade
 /*
     velocidade Máxima: 70km
     a cada 5km acima do limite vc ganha 1 ponto na carteira
@@ -76,9 +76,9 @@ function medidor(velocidade){if(velocidade <= 70 ) return "Okay";
         if(pontos > 12) return "Carteira suspendida!";
         else return ("Você levou " + pontos + " Pontos na carteira.");
     }else return "Valor incoerente ou nulo";}
-//Fim Medidor de velocidade
+///////////////////////////////////////////////////////////////////Fim Medidor de velocidade
 
-//Impar ou Par
+////////////////////////////////////////////////////////////////////////Impar ou Par
 /*
     Receber uma quantidade de valores para avaliar 
     função exibe se cada valor é par ou impar 
@@ -108,9 +108,9 @@ function imparOuPar(type,value){
         }
     }else return "oq??";
 }
-//Fim Impar ou Par
+///////////////////////////////////////////////////////////////////////Fim Impar ou Par
 
-//Encontre o String
+/////////////////////////////////////////////////////////////////////Encontre o String
 /*
     Criar um método para ler propriedades de um objeto e
     exibir somente as propriedades do tipo string que estão neste objeto
@@ -130,9 +130,9 @@ function retornaString (obj){
         }
     }
 }
-//Fim encontre o String
+/////////////////////////////////////////////////////////////////////Fim encontre o String
 
-//multiplos de 3 e 5
+///////////////////////////////////////////////////////////////////////multiplos de 3 e 5
 /*
     Criar função somar que retorna a soma de todos os múltiplos de 3 e 5
     m = n * k
@@ -165,9 +165,9 @@ function showOddNumbers(number){
         }
     }
 }
-//Fim multiplos de 3 e 5
+///////////////////////////////////////////////////////////////////Fim multiplos de 3 e 5
 
-//Exercício de média escolar
+////////////////////////////////////////////////////////////////Exercício de média escolar
 /*
 Obter a média a partir de um array
 0-59: F
@@ -192,9 +192,9 @@ function calculaMedia(array){
     }
     return media / (array.length);
 }
-//Fim exercício médias escolar
+/////////////////////////////////////////////////////////Fim exercício médias escolar
 
- //Astericos 
+ /////////////////////////////////////////////////////////////////////////Astericos 
 function asterisco (value){
     let contador = "";
     for (i= 0 ; i < value; i++){
@@ -212,9 +212,9 @@ function asteriscos2(value){
         console.log(contador)
     }
 }
-//Fim asteriscos 
+///////////////////////////////////////////////////////////////////Fim asteriscos 
 
-//Números primos
+///////////////////////////////////////////////////////////////////Números primos
 function primos(valor){
     for(i=0; i <= valor; i++){
         let contador = 0;
@@ -240,4 +240,102 @@ function NumeroPrimo(numero){
     }
     return true;
 }
-//Fim Números primos
+///////////////////////////////////////////////////////////////Fim Números primos
+
+/////////////////////////////////////////////////////////////Factory functions 
+/*ANTES*/
+const celular = {
+    marcaCelular : 'ASUS',
+    tamanhoTela : {
+        vertical: 155,
+        horizontal : 75
+    },
+    capacidadeBateria : 5500,
+    liga : function(){
+        console.log("Fazendo ligação...");
+    }
+}
+/*DEPOIS*/
+function criarCelular(marcaCelular, tamanhoTela, capacidadeBateria ){
+    return{
+        marcaCelular,
+        tamanhoTela,
+        capacidadeBateria,
+        ligar(){
+            console.log("Fazendo ligação...")
+        }
+    }
+}
+const celular1 = criarCelular('Iphone', 5.5, 4500);
+//////////////////////////////////////////////////Fim factory functions
+
+////////////////////////////////////////////Constructor functions
+function Celular(marcaCelular,tamanhoTela,capacidadeBateria){
+    this.marcaCelular = marcaCelular,
+    this.tamanhoTela = tamanhoTela,
+    this.capacidadeBateria = capacidadeBateria,
+    this.ligar = function(){
+        console.log("Fazendo ligação!")
+    }
+}
+const celular2 = new Celular('Iphone',6.0,4300);
+
+/*Exercicio*///Faça vc mesmo sua constructor function
+function Guitar(marca,cordas,material,preco){
+    this.marca = marca,
+    this.cordas = cordas,
+    this.material = material,
+    this.preco = preco,
+    this.tocar = function(){
+        console.log("Estou tocando Guitarra :)")
+    }
+}
+let guitarra = new Guitar('fender',12,'madeira','5.450,00')
+/////////////////////////////////Fim constructor functions
+
+//////////////////////////////////////////Natureza dinâmica de objetos
+/*Voce pode inserir itens nos objetos*/ 
+const obj = {
+    nome : 'Guilherme',
+    idade : 21
+}
+obj.altura = 188;
+obj.verPerfil = function(){
+    console.log('Vc está vendo meu perfil');
+}
+/**E podemos deletar parâmetros também**/
+delete obj.altura;
+delete obj.nome;
+
+//////////////////////////////////////Fim Natureza dinâmica de objetos
+ 
+//////////////////////////////////////////Clonando objetos
+const objClone = {
+    nome : 'Guilherme',
+    idade : 21,
+    altura : 188,
+    peso : '80kg',
+    perfil : function(){
+        console.log("Vendo perfil");
+    }
+}
+const novoObj = Object.assign({
+    feio : true
+}, objClone); // Clonando objClone para novoObj// No primeiro parâmetro você pode adicionar novos atributos para o objeto clonado
+
+
+/** Ou podemos também clonar usando spread, que são os 3 pontos. Por Exemplo: **/
+const objNovo2 = {...novoObj};
+
+// criando e clonando meu próprio obj
+const carro = {
+    marca : 'parati',
+    cor : 'marrom',
+    preco : 'baratin'
+}
+const novoCarro = Object.assign({
+    velho : true
+},carro);
+
+console.log(novoCarro);
+///////////////////////////////////////Fim clonando objetos
