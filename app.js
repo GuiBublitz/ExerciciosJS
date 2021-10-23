@@ -368,3 +368,25 @@ mensagem.endsWith('');//Faz a mesma coisa q a de cima porém ele avalia o final 
 mensagem.replace('Bom', 'Péssimo');//Ele deleta a string bom, e adiciona pessimo
 // Você pode verificar tudo oq vc imaginar em uma simples string, vc vai encontrar tudo na documentação mozilla
 ////////////////////////////////////////////////////////////////Fim String
+
+///////////////////////////////////////////////////////////////////////////////////Templete Literal scape sequences
+const msm = `isto é minha 'primeira' mensagem!!`;
+
+/*Exercicio*/ 
+function m(nome,idade){
+const minhaMensagem =
+`Ola ${nome}!! Tudo bom?
+
+Sei que você ja tem ${idade} anos!! Mass queria te pedir um favor:
+
+Nós aqui da sua casa, adorariamos que você ajudasse
+na louça após a janta e o almoço :)
+
+Fica o recado, atenciosamente, nós da sua casa!
+`
+return minhaMensagem;
+}
+
+
+console.log(m('Guilherme', 21));
+/////////////////////////////////////////////////////////////////////////////////Fim templete literal
