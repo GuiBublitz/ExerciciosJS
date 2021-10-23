@@ -337,5 +337,24 @@ const novoCarro = Object.assign({
     velho : true
 },carro);
 
-console.log(novoCarro);
 ///////////////////////////////////////Fim clonando objetos
+
+/////////////////////////////////////////////////////////////////////////////////////Math
+/*
+ Math.random(); cria numeros aleatorios entre zero e um
+*/
+//o código a baixo é disponibilizado na documentação da mozilla e retorna um valor aleatorio entre o primeiro parâmetro e o segundo parâmetro
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  Math.max(5,9,7,3); //me retorna o maior valor :)
+  Math.min()// É bem óbvio né
+
+////////////////////////////////////////////////////////////////////////////////////////Fim do Math
+
+/////////////////////////////////////////////////////////////////String
+
+////////////////////////////////////////////////////////////////Fim String
