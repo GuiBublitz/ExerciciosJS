@@ -471,7 +471,7 @@ let postagem = {
     buscar a virada contra o time tricolor!! #VamosFlamengo!
     `,
     autor : 'Guilherme Eduardo Bublitz',
-    vizualizações : 9563,
+    visualizações : 9563,
     comentarios : [
     {
         autor : 'GabiGol',
@@ -485,3 +485,17 @@ let postagem = {
     estaAoVivo : true
 }
 /////////////////////////////////////////////////////////////////////////////Fim objeto postagem de blog
+
+//////////////////////////////////////////////////////////////////////////////Constructor function (Exercício)
+function Postagem (titulo,mensagem,autor){
+    this.titulo = titulo,
+    this.mensagem = mensagem,
+    this.autor = autor,
+    this.visualizações = 0,
+    this.comentarios = [],
+    this.aovivo = false
+}
+let postagem = new Postagem('Flamengo perde de novo!','Torcedores do flamengo começam a perder a paciência com Renato Gaúcho','Guilherme Eduardo Bublitz');
+
+
+/////////////////////////////////////////////////////////////////////////////Fim constructor function
