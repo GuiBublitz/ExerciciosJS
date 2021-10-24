@@ -495,7 +495,53 @@ function Postagem (titulo,mensagem,autor){
     this.comentarios = [],
     this.aovivo = false
 }
-let postagem = new Postagem('Flamengo perde de novo!','Torcedores do flamengo começam a perder a paciência com Renato Gaúcho','Guilherme Eduardo Bublitz');
-
-
+let postagem2 = new Postagem('Flamengo perde de novo!','Torcedores do flamengo começam a perder a paciência com Renato Gaúcho','Guilherme Eduardo Bublitz');
 /////////////////////////////////////////////////////////////////////////////Fim constructor function
+
+//////////////////////////////////////////////////////////////////////////////////Faixa de preço
+let faixas = [
+    {
+        tooltip : 'Até R$700',
+        minimo : 0,
+        maximo : 700
+    },
+    {
+        tooltip : 'De R$700 à R$1200',
+        minimo : 700,
+        maximo : 1200
+    },
+    {
+        tooltip : 'R$1000 ou mais',
+        minimo : 1000,
+        maximo : 999999
+    }
+]
+/*OUUU*/ 
+function criarFaixaPreco (tooltip,minimo,maximo){
+    return {
+        tooltip,
+        minimo,
+        maximo
+    }
+}
+let faixas2 = [
+    criarFaixaPreco('Até R$700',0,700),
+    criarFaixaPreco('Até R$1200',0,1200),
+    criarFaixaPreco('Até R$2000',0,2000)
+]
+
+/*OUUU*/ 
+function CriarToolTips(tootip,minimo,maximo){
+    this.tooltip = tootip,
+    this.minimo = minimo,
+    this.maximo = maximo
+}
+
+let faixas3 = [
+    new CriarToolTips('a',0,700),
+    new CriarToolTips('a',0,1200),
+    new CriarToolTips('a',0,2000)
+]
+console.log(faixas3)
+
+/////////////////////////////////////////////////////////////////////////////////Fim faixa de preço
