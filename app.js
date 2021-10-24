@@ -604,11 +604,24 @@ let marca = marcas.find(function(marca){
 /*exercicio achar tipo de referencia*/ 
 const nomes = [
     {nome:'Guilherme'},
-    {nome:'Eduarda'},
+    {nome:'Eduarda',pet: {gato: {1:'myah'}}},
     {nome:'Sara'},
-    {nome:'Lucas'}
+    {nome:'Lucas'},
+    {nome:'Cleitin'}
 ]
 let guardaNome =  nomes.find(function (obj){
     return obj.nome === 'Eduarda';
 });
 ///////////////////////////////////////////////////////////////////////FIM Manipilação avançada de arrays no Java Script
+
+///////////////////////////////////////////////////////////////////////////////////Arrow functions
+
+/*Antes*/ 
+function ola(mensagem){
+    console.log(mensagem);
+}
+/**Depois */
+console.log(nomes.find(obj => obj.nome === 'Eduarda'));
+console.log(nomes);
+
+//////////////////////////////////////////////////////////////////////////////////////Fim arrow Functions
