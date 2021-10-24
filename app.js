@@ -542,6 +542,43 @@ let faixas3 = [
     new CriarToolTips('a',0,1200),
     new CriarToolTips('a',0,2000)
 ]
-console.log(faixas3)
+
 
 /////////////////////////////////////////////////////////////////////////////////Fim faixa de preço
+
+///////////////////////////////////////////////////////////////////////Manipilação avançada de arrays no Java Script
+/** Adicionando um elemento dentro de um array / No inicio / no meio e no final **/
+const array = [1,2,3];
+array.unshift('olá');//Adiciona o elemento 'olá' no indice 0 do meu array e empurra todos os outros elementos para o proximo indice
+array.splice(2,0,'hello'); ///Primeiro parâmetro é o indice,
+                          // o segundo parâmetro é oq eu quero deletar, no caso o zero significa que nao queremos deletar nada
+                          // e o terceiro parâmetro é oq eu vou inserir.
+array.push('eu sou o ultimo');// Adiciona na ultima posição do array um novo elemento 'eu sou oultimo'
+                              //, aumentando assim nosso array
+
+/*Montar um array com os 3 metodos de manipulação*/ 
+const minhaFamilia = [];
+minhaFamilia.push(
+    {
+       pais : {
+           mae: 'Gisele',
+           pai : 'Egon'
+        }
+    },
+    {
+       irmas : {
+          1 : 'Bianca',
+          2 : 'Ana',
+          3 : 'Julia'
+        }
+    });
+    minhaFamilia.unshift({eu:'Guilherme'});
+    minhaFamilia.splice(2,0,{
+            pets : {
+                gatos : {
+                    1 : 'myah'
+                }
+            }
+    });
+    console.log(minhaFamilia);
+///////////////////////////////////////////////////////////////////////FIM Manipilação avançada de arrays no Java Script
