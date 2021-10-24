@@ -612,16 +612,19 @@ const nomes = [
 let guardaNome =  nomes.find(function (obj){
     return obj.nome === 'Eduarda';
 });
+/**Removendo elementos do array */
+const penal = ['lapis','caneta','borracha','apontador','Marca texto'];
+penal.pop();// remove o ultimo item
+penal.shift();//Remove o primeiro item
+penal.splice(1,0,'Olá');
+
 ///////////////////////////////////////////////////////////////////////FIM Manipilação avançada de arrays no Java Script
 
 ///////////////////////////////////////////////////////////////////////////////////Arrow functions
-
 /*Antes*/ 
 function ola(mensagem){
     console.log(mensagem);
 }
 /**Depois */
-console.log(nomes.find(obj => obj.nome === 'Eduarda'));
-console.log(nomes);
-
+nomes.find(obj => obj.nome === 'Eduarda');
 //////////////////////////////////////////////////////////////////////////////////////Fim arrow Functions
