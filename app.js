@@ -591,4 +591,24 @@ casas.lastIndexOf(3); // Mas e se tivermos 2 tipos ou mais de elemento 3 em noss
 let elementoQqueroVerificarSeTem = 'Gui';
 casas.includes(elementoQqueroVerificarSeTem);// includes verifica se à o elemento e retorna true ou false 
 
+/*Encontrando elementos do tipo referência dentro de um array*/ 
+const marcas = [
+    {id:1,nome: 'a'},
+    {id:2,nome: 'b'},
+    {id:3,nome: 'c'}
+];
+let marca = marcas.find(function(marca){
+    return marca.nome === 'b';
+});
+
+/*exercicio achar tipo de referencia*/ 
+const nomes = [
+    {nome:'Guilherme'},
+    {nome:'Eduarda'},
+    {nome:'Sara'},
+    {nome:'Lucas'}
+]
+let guardaNome =  nomes.find(function (obj){
+    return obj.nome === 'Eduarda';
+});
 ///////////////////////////////////////////////////////////////////////FIM Manipilação avançada de arrays no Java Script
