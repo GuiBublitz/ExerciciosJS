@@ -617,6 +617,12 @@ const penal = ['lapis','caneta','borracha','apontador','Marca texto'];
 penal.pop();// remove o ultimo item
 penal.shift();//Remove o primeiro item
 penal.splice(1,0,'Olá');
+let penal2 = penal;
+/**Esvaziando um array */
+penal.length = 0; //Apaga todo nosso array e incllusive as copias desse array são deletadas
+console.log(penal2);
+
+/**Cobinando e cortanto arrays */
 
 ///////////////////////////////////////////////////////////////////////FIM Manipilação avançada de arrays no Java Script
 
