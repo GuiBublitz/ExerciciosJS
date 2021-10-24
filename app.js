@@ -620,9 +620,16 @@ penal.splice(1,0,'Olá');
 let penal2 = penal;
 /**Esvaziando um array */
 penal.length = 0; //Apaga todo nosso array e incllusive as copias desse array são deletadas
-console.log(penal2);
+
 
 /**Cobinando e cortanto arrays */
+const numbers1 = [1,2,3];
+const numbers2 = [4,5,6];
+let combinado = numbers1.concat(numbers2);
+let cortado = combinado.slice(2,5); // Já se deixarmos apenas um parâmetro ele retorna do parâmetro passado em diante
+                                    //se nao for adicionado nenhum parâmetro, ele simplismente clona
+console.log(cortado);
+console.log(combinado);
 
 ///////////////////////////////////////////////////////////////////////FIM Manipilação avançada de arrays no Java Script
 
