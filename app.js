@@ -580,5 +580,15 @@ minhaFamilia.push(
                 }
             }
     });
-    console.log(minhaFamilia);
+
+/* Encontrando elementos(primitivos) dentro de um array*/ 
+let casas = [1,2,3,4,'a',1,3,'Gui'];
+casas.indexOf(3);//me retorna o indice do elemento que eu passar, no caso retorna o indice do elemento 3, que é 2.
+                // se eu colocasse um elemento inexistente no array, ele me retornaria -1, lembrando que o indexof 
+                // leva em consideração o tipo também(string number etc etc)
+casas.lastIndexOf(3); // Mas e se tivermos 2 tipos ou mais de elemento 3 em nosso array?, Bom vc pode usar o lastindexof
+                      // para pegar o indice do ultimo elemento 3 do nosso array, neste caso retornaria 6
+let elementoQqueroVerificarSeTem = 'Gui';
+casas.includes(elementoQqueroVerificarSeTem);// includes verifica se à o elemento e retorna true ou false 
+
 ///////////////////////////////////////////////////////////////////////FIM Manipilação avançada de arrays no Java Script
