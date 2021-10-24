@@ -628,8 +628,13 @@ const numbers2 = [4,5,6];
 let combinado = numbers1.concat(numbers2);
 let cortado = combinado.slice(2,5); // Já se deixarmos apenas um parâmetro ele retorna do parâmetro passado em diante
                                     //se nao for adicionado nenhum parâmetro, ele simplismente clona
-console.log(cortado);
-console.log(combinado);
+
+/**clonando e combinando array utilizando spread */
+combinado = [];
+combinado = [...numbers1]; // ele clona o numbers1 para dentro do combinado
+combinado = [...numbers1,...numbers2]//Ele clona os 2 arrays para dentro do meu combinando, um seguido do outro
+                                    //combinando assim, os dois
+combinado = [...numbers1,'ola mundo',2,4,...numbers2, 'eita'];//vc pode inclusive adicionar itens normalmente
 
 ///////////////////////////////////////////////////////////////////////FIM Manipilação avançada de arrays no Java Script
 
