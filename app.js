@@ -650,7 +650,7 @@ nomes.find(obj => obj.nome === 'Eduarda');
 //////////////////////////////////////////////////////////////////////////////////////////////////Foreach
 
 const numbers99 = [1,2,3,4,5,6,7];
-numbers99.forEach((num,ind)=>console.log(num,ind));
+//numbers99.forEach((num,ind)=>console.log(num,ind));
 
 //////////////////////////////////////////////////////////////////////////////////////////////////fim forech
 
@@ -660,14 +660,76 @@ let frase = ['ola','seu','mequetrefe'];
 frase = frase.join(' ');
 frase = frase.split(' ');
 frase = frase.join('-');
-console.log(frase);
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////fim join/split
 
 ////////////////////////////////////////////////////////////////////////////////Como receber dados do usuario
-const idadeUser = prompt('Qual tua idade?');
-if(idadeUser >= 18){
-    alert('VC é maior de idade!');
-}else alert('vc é de menor');
+// const idadeUser = prompt('Qual tua idade?');
+// if(idadeUser >= 18){
+//     alert('VC é maior de idade!');
+// }else alert('vc é de menor');
 //////////////////////////////////////////////////////////////////////////////fim como receber dados do usuario
+
+////////////////////////////////////////////////////////////////////////////Intro manipulação DOM
+
+// document.getElementById('pororoca').innerHtml = '<div><h1>Eu sou rei, que delicia!</h1></div>';
+// document.getElementsByClass('pororoca').innerHtml = '<div><h1>Eu sou rei, que delicia!</h1></div>';
+
+let listas = [
+    {
+        nome : 'Guilherme',
+        convidados : [
+            {nome: 'a'},
+            {nome: 'b'},
+            {nome: 'c'}
+        ]
+    },
+    {
+        nome : 'Lucas',
+        convidados : [
+            {nome: 'd'},
+            {nome: 'e'},
+            {nome: 'f'}
+        ]
+    },
+    {
+        nome : 'Matheus',
+        convidados : [
+            {nome: 'g'},
+            {nome: 'h'},
+            {nome: 'i'}
+        ]
+    }
+]
+
+let btn = document.getElementById('btn-verifica');
+let p = document.getElementById('label-permissao');
+let inputName = document.getElementById('nome-convidado');
+let inputDono = document.getElementById('nome-dono');
+
+
+btn.addEventListener('click', ()=>{
+    for (a in listas){
+        let lista = listas[a];
+        if(inputDono.value != lista.nome){
+            p.innerText = `Lista convidados de ' ${inputDono.value} ' não existe.`; 
+            continue;
+        }
+        return nomeNaLista(lista,inputName.value);
+    }
+});
+
+function nomeNaLista (lista,nome){
+    for(b in lista.convidados){
+        if(nome != lista.convidados[b].nome){
+            p.innerText = 'Não está na lista!';        
+            continue;
+        }
+        return p.innerText = 'Está na lista'; 
+    }
+    
+}
+
+////////////////////////////////////////////////////////////////////////Fim intro manipulação DOM
