@@ -709,7 +709,6 @@ let p = document.getElementById('label-permissao');
 let inputName = document.getElementById('nome-convidado');
 let inputDono = document.getElementById('nome-dono');
 
-
 btn.addEventListener('click', ()=>{
     for (a in listas){
         let lista = listas[a];
@@ -720,7 +719,6 @@ btn.addEventListener('click', ()=>{
         return nomeNaLista(lista,inputName.value);
     }
 });
-
 function nomeNaLista (lista,nome){
     for(b in lista.convidados){
         if(nome != lista.convidados[b].nome){
@@ -729,7 +727,6 @@ function nomeNaLista (lista,nome){
         }
         return p.innerText = 'Está na lista'; 
     }
-    
 }
 
 ////////////////////////////////////////////////////////////////////////Fim intro manipulação DOM
