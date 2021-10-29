@@ -75,7 +75,8 @@ function medidor(velocidade){if(velocidade <= 70 ) return "Okay";
         let pontos = Math.floor((velocidade -= velocidadeMáxima) / 5 );
         if(pontos > 12) return "Carteira suspendida!";
         else return ("Você levou " + pontos + " Pontos na carteira.");
-    }else return "Valor incoerente ou nulo";}
+    }else return "Valor incoerente ou nulo";
+}
 ///////////////////////////////////////////////////////////////////Fim Medidor de velocidade
 
 ////////////////////////////////////////////////////////////////////////Impar ou Par
@@ -194,7 +195,7 @@ function calculaMedia(array){
 }
 /////////////////////////////////////////////////////////Fim exercício médias escolar
 
- /////////////////////////////////////////////////////////////////////////Astericos 
+/////////////////////////////////////////////////////////////////////////Astericos 
 function asterisco (value){
     let contador = "";
     for (i= 0 ; i < value; i++){
@@ -529,7 +530,6 @@ let faixas2 = [
     criarFaixaPreco('Até R$1200',0,1200),
     criarFaixaPreco('Até R$2000',0,2000)
 ]
-
 /*OUUU*/ 
 function CriarToolTips(tootip,minimo,maximo){
     this.tooltip = tootip,
@@ -703,12 +703,10 @@ let listas = [
         ]
     }
 ]
-
 let btn = document.getElementById('btn-verifica');
 let p = document.getElementById('label-permissao');
 let inputName = document.getElementById('nome-convidado');
 let inputDono = document.getElementById('nome-dono');
-
 btn.addEventListener('click', ()=>{
     for (a in listas){
         let lista = listas[a];

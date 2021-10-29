@@ -22,6 +22,7 @@ body{
 }
 .jumbotron{
 height: 600px;
+background-color: gray;
 }
 .display-4{
     font-weight: bold;
